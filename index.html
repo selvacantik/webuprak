@@ -1,0 +1,638 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summer TKJ | Learn Technology</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #ffb6cb;
+  --pink-dark: #f477a5;
+  --yellow: #ffe69a;
+  --cream: #fffaf0;
+  --purple: #9275a8;
+  --text: #59485e;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+}
+
+/* NAVBAR */
+nav {
+  background: rgba(255,255,255,.92);
+  padding: 15px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 15px #e9c6d4;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--pink-dark);
+}
+
+.logo span {
+  color: #e7b943;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--pink-dark);
+}
+
+/* HERO */
+.hero {
+  min-height: 520px;
+  padding: 80px 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background:
+    radial-gradient(circle at 90% 15%, #fff0ad 0 9%, transparent 10%),
+    linear-gradient(130deg, #ffd1df, #fff0b9);
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.tag {
+  display: inline-block;
+  background: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  color: var(--pink-dark);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 5vw, 58px);
+  line-height: 1.2;
+  color: #674d68;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #ed729f;
+}
+
+.hero p {
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--pink-dark);
+  color: white;
+  padding: 13px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: var(--purple);
+  transform: translateY(-4px);
+}
+
+.hero-art {
+  font-size: 125px;
+  text-align: center;
+  min-width: 240px;
+}
+
+.hero-art .small {
+  font-size: 45px;
+}
+
+/* GENERAL */
+section {
+  padding: 75px 9%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 30px;
+  color: #745b78;
+}
+
+.section-title p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* ABOUT */
+.about {
+  text-align: center;
+  background: white;
+}
+
+.about p {
+  max-width: 750px;
+  margin: auto;
+  line-height: 2;
+  font-size: 14px;
+}
+
+/* MATERIAL CARDS */
+.materials {
+  background: #fff5e2;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 7px 20px #ead4d9;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #e879a0;
+}
+
+.card p {
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.card a {
+  color: #b77d36;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* CONTENT */
+.content-section {
+  background: white;
+}
+
+.lesson {
+  background: #fff7f4;
+  border-left: 5px solid var(--pink);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.lesson h3 {
+  color: #dc779b;
+  margin-bottom: 15px;
+}
+
+.lesson p, .lesson li {
+  font-size: 13px;
+  line-height: 2;
+}
+
+.lesson ul, .lesson ol {
+  padding-left: 22px;
+}
+
+.highlight {
+  background: #fff0b9;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: center;
+}
+
+th {
+  background: #ffc4d6;
+}
+
+th, td {
+  border: 1px solid #eacbd5;
+  padding: 11px 7px;
+}
+
+/* IP */
+.ip-box {
+  background: #fff0bd;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+code {
+  background: #fce0eb;
+  color: #a04f75;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+  background: #f5b4cb;
+  padding: 30px;
+  text-align: center;
+  color: #684b5c;
+  font-size: 12px;
+  line-height: 2;
+}
+
+footer strong {
+  color: #795c30;
+}
+
+/* RESPONSIVE */
+@media(max-width: 800px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 55px 6%;
+  }
+
+  .hero-art {
+    font-size: 90px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">🌸 SUMMER <span>TKJ</span></div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">Tentang</a></li>
+    <li><a href="#materi">Materi</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="hero-content">
+    <span class="tag">☀️ WELCOME TO SUMMER TKJ</span>
+    <h1>Explore The World of <span>Technology!</span></h1>
+    <p>
+      Belajar teknologi jaringan komputer dengan cara
+      yang menyenangkan. Mulai dari merakit kabel LAN,
+      membuat website, hingga memahami konfigurasi IP Address.
+    </p>
+    <a href="#materi" class="btn">Mulai Belajar ✨</a>
+  </div>
+
+  <div class="hero-art">
+    🌐
+    <div class="small">💻 🔌 📡</div>
+    <div class="small">🌴 ☀️ 🌼</div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-title">
+    <h2>About Summer TKJ 🌷</h2>
+    <p>Learn, Practice, and Create!</p>
+  </div>
+
+  <p>
+    Summer TKJ merupakan website pembelajaran yang membahas
+    dasar-dasar Teknik Komputer dan Jaringan (TKJ).
+    Website ini menyediakan tiga materi utama yang dapat
+    membantu siswa memahami praktik jaringan komputer,
+    pembuatan website, serta konfigurasi alamat IP.
+    Belajar teknologi menjadi lebih mudah, menarik,
+    dan menyenangkan!
+  </p>
+</section>
+
+<!-- MATERIALS -->
+<section class="materials" id="materi">
+  <div class="section-title">
+    <h2>Our Learning Materials 📚</h2>
+    <p>Three main topics you need to know!</p>
+  </div>
+
+  <div class="card-container">
+
+    <div class="card">
+      <div class="card-icon">🔌</div>
+      <h3>Perakitan Kabel LAN</h3>
+      <p>
+        Mengenal kabel UTP, konektor RJ45, susunan
+        warna kabel, dan cara merakit kabel jaringan.
+      </p>
+      <a href="#lan">Pelajari Materi →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">💻</div>
+      <h3>Pembuatan Web dari GitHub</h3>
+      <p>
+        Belajar membuat repository, mengunggah
+        file HTML, dan mempublikasikan website.
+      </p>
+      <a href="#github">Pelajari Materi →</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📡</div>
+      <h3>Konfigurasi IP Address</h3>
+      <p>
+        Memahami alamat IP, subnet mask, gateway,
+        DNS, dan pengaturan jaringan komputer.
+      </p>
+      <a href="#ip">Pelajari Materi →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- MATERI 1 -->
+<section class="content-section" id="lan">
+  <div class="section-title">
+    <h2>01. Perakitan Kabel LAN 🔌</h2>
+    <p>Mengenal dan membuat kabel jaringan komputer</p>
+  </div>
+
+  <div class="lesson">
+    <h3>Apa Itu Kabel LAN?</h3>
+    <p>
+      Kabel LAN adalah media yang digunakan untuk
+      menghubungkan perangkat komputer ke jaringan.
+      Kabel yang sering digunakan adalah kabel UTP
+      (Unshielded Twisted Pair) dengan konektor RJ45.
+    </p>
+  </div>
+
+  <div class="lesson">
+    <h3>Alat dan Bahan</h3>
+    <ul>
+      <li>Kabel UTP</li>
+      <li>Konektor RJ45</li>
+      <li>Tang crimping</li>
+      <li>LAN tester</li>
+      <li>Cutter atau pengupas kabel</li>
+    </ul>
+  </div>
+
+  <div class="lesson">
+    <h3>Urutan Warna Kabel T568B</h3>
+    <table>
+      <tr>
+        <th>Pin</th>
+        <th>Warna Kabel</th>
+      </tr>
+      <tr><td>1</td><td>Putih - Oranye</td></tr>
+      <tr><td>2</td><td>Oranye</td></tr>
+      <tr><td>3</td><td>Putih - Hijau</td></tr>
+      <tr><td>4</td><td>Biru</td></tr>
+      <tr><td>5</td><td>Putih - Biru</td></tr>
+      <tr><td>6</td><td>Hijau</td></tr>
+      <tr><td>7</td><td>Putih - Cokelat</td></tr>
+      <tr><td>8</td><td>Cokelat</td></tr>
+    </table>
+  </div>
+
+  <div class="lesson">
+    <h3>Langkah-Langkah Perakitan</h3>
+    <ol>
+      <li>Siapkan seluruh alat dan bahan.</li>
+      <li>Kupas bagian luar kabel UTP secukupnya.</li>
+      <li>Pisahkan dan luruskan delapan kabel kecil.</li>
+      <li>Susun warna sesuai standar T568B.</li>
+      <li>Rapikan dan ratakan ujung kabel.</li>
+      <li>Masukkan kabel ke konektor RJ45 sampai posisinya tepat.</li>
+      <li>Gunakan tang crimping untuk mengunci konektor.</li>
+      <li>Uji hasil perakitan menggunakan LAN tester.</li>
+    </ol>
+    <div class="highlight">
+      💡 Tips: Pastikan susunan warna benar dan hasil pengujian
+      LAN tester menunjukkan koneksi setiap pin dengan baik.
+    </div>
+  </div>
+</section>
+
+<!-- MATERI 2 -->
+<section class="materials" id="github">
+  <div class="section-title">
+    <h2>02. Membuat Website dari GitHub 💻</h2>
+    <p>Publish your own website!</p>
+  </div>
+
+  <div class="lesson">
+    <h3>Apa Itu GitHub?</h3>
+    <p>
+      GitHub adalah platform untuk menyimpan, mengelola,
+      dan membagikan kode program secara online.
+      GitHub Pages memungkinkan pengguna mempublikasikan
+      website statis secara gratis.
+    </p>
+  </div>
+
+  <div class="lesson">
+    <h3>Langkah Membuat Website</h3>
+    <ol>
+      <li>Buka website <strong>github.com</strong>.</li>
+      <li>Login atau buat akun GitHub.</li>
+      <li>Klik tombol <strong>New Repository</strong>.</li>
+      <li>Masukkan nama repository.</li>
+      <li>Pilih opsi Public.</li>
+      <li>Klik Create Repository.</li>
+      <li>Pilih Add File lalu Create New File.</li>
+      <li>Beri nama file <code>index.html</code>.</li>
+      <li>Masukkan kode HTML website.</li>
+      <li>Klik Commit Changes.</li>
+    </ol>
+  </div>
+
+  <div class="lesson">
+    <h3>Cara Mengaktifkan GitHub Pages</h3>
+    <ol>
+      <li>Buka repository yang sudah dibuat.</li>
+      <li>Pilih menu Settings.</li>
+      <li>Klik menu Pages.</li>
+      <li>Pada bagian Build and Deployment, pilih Deploy from a branch.</li>
+      <li>Pilih branch Main dan folder /(root).</li>
+      <li>Klik Save.</li>
+      <li>Tunggu proses publikasi selesai.</li>
+      <li>Buka alamat website yang diberikan GitHub.</li>
+    </ol>
+
+    <div class="highlight">
+      🌐 Website kamu sekarang bisa diakses secara online!
+      Pastikan file utama bernama index.html.
+    </div>
+  </div>
+</section>
+
+<!-- MATERI 3 -->
+<section class="content-section" id="ip">
+  <div class="section-title">
+    <h2>03. Konfigurasi IP Address 📡</h2>
+    <p>Understanding computer networking</p>
+  </div>
+
+  <div class="lesson">
+    <h3>Apa Itu IP Address?</h3>
+    <p>
+      IP Address adalah alamat numerik yang digunakan
+      untuk mengidentifikasi perangkat dalam jaringan
+      komputer agar dapat saling berkomunikasi.
+    </p>
+  </div>
+
+  <div class="lesson">
+    <h3>Jenis IP Address</h3>
+    <ul>
+      <li><strong>IP Public:</strong> Alamat yang dapat dirutekan melalui internet.</li>
+      <li><strong>IP Private:</strong> Alamat yang digunakan dalam jaringan lokal.</li>
+      <li><strong>IP Static:</strong> Alamat yang diatur secara manual.</li>
+      <li><strong>IP Dynamic:</strong> Alamat yang diberikan secara otomatis, biasanya melalui DHCP.</li>
+    </ul>
+  </div>
+
+  <div class="lesson">
+    <h3>Komponen Konfigurasi IP</h3>
+    <ul>
+      <li><strong>IP Address:</strong> Alamat perangkat.</li>
+      <li><strong>Subnet Mask:</strong> Menentukan bagian jaringan dan host.</li>
+      <li><strong>Default Gateway:</strong> Jalur menuju jaringan lain.</li>
+      <li><strong>DNS:</strong> Menerjemahkan nama domain menjadi alamat IP.</li>
+    </ul>
+  </div>
+
+  <div class="lesson">
+    <h3>Contoh Konfigurasi IP</h3>
+
+    <div class="ip-box">
+      <p>IP Address: <code>192.168.1.10</code></p>
+      <p>Subnet Mask: <code>255.255.255.0</code></p>
+      <p>Gateway: <code>192.168.1.1</code></p>
+      <p>DNS: <code>8.8.8.8</code></p>
+    </div>
+
+    <p style="margin-top:15px">
+      Contoh tersebut merupakan konfigurasi jaringan
+      IPv4 private. Gunakan alamat yang sesuai dengan
+      jaringan yang sedang digunakan dan pastikan tidak
+      terjadi konflik IP.
+    </p>
+  </div>
+
+  <div class="lesson">
+    <h3>Cara Konfigurasi IP di Windows</h3>
+    <ol>
+      <li>Buka Control Panel.</li>
+      <li>Pilih Network and Internet.</li>
+      <li>Klik Network and Sharing Center.</li>
+      <li>Pilih Change Adapter Settings.</li>
+      <li>Klik kanan pada Ethernet atau Wi-Fi.</li>
+      <li>Pilih Properties.</li>
+      <li>Klik Internet Protocol Version 4 (TCP/IPv4).</li>
+      <li>Pilih Obtain an IP address automatically untuk DHCP, atau masukkan IP manual sesuai pengaturan jaringan.</li>
+      <li>Klik OK untuk menyimpan.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="kontak">
+  <h2>🌸 SUMMER TKJ 🌸</h2>
+  <p>Learn Technology in a Fun Way!</p>
+  <p>Materi: Kabel LAN | GitHub | IP Address</p>
+  <br>
+  <strong>Created with ♡ for TKJ Students</strong>
+  <p>© 2026 Summer TKJ. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
