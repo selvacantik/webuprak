@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi 3 | Konfigurasi IP</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">🌸 Summer<span>TKJ</span></a>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="materi1.html">Kabel LAN</a></li>
+    <li><a href="materi2.html">GitHub</a></li>
+    <li><a class="active" href="materi3.html">Konfigurasi IP</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero">
+  <span>LESSON 03 📡</span>
+  <h1>Konfigurasi IP Address</h1>
+  <p>Memahami alamat dan pengaturan jaringan komputer.</p>
+</header>
+
+<main class="lesson-container">
+
+  <article class="lesson-box">
+    <h2>01. Pengertian IP Address</h2>
+    <p>
+      IP Address (Internet Protocol Address) adalah
+      alamat numerik yang diberikan kepada perangkat
+      jaringan untuk mengidentifikasi perangkat dan
+      memungkinkan komunikasi antarperangkat.
+    </p>
+  </article>
+
+  <article class="lesson-box">
+    <h2>02. Jenis IP Address</h2>
+    <div class="item-grid">
+      <div class="item">
+        <b>IP Public</b>
+        <p>Alamat yang dapat dirutekan melalui internet.</p>
+      </div>
+      <div class="item">
+        <b>IP Private</b>
+        <p>Alamat yang digunakan dalam jaringan lokal.</p>
+      </div>
+      <div class="item">
+        <b>IP Static</b>
+        <p>Alamat IP yang diatur secara manual.</p>
+      </div>
+      <div class="item">
+        <b>IP Dynamic</b>
+        <p>Alamat IP yang diberikan secara otomatis, biasanya melalui DHCP.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="lesson-box">
+    <h2>03. Versi IP Address</h2>
+    <h3>IPv4</h3>
+    <p>
+      IPv4 menggunakan alamat 32-bit yang ditulis
+      dalam empat bagian angka desimal.
+      Contoh: 192.168.1.10
+    </p>
+    <h3>IPv6</h3>
+    <p>
+      IPv6 menggunakan alamat 128-bit yang ditulis
+      dalam bentuk kelompok bilangan heksadesimal.
+      Contoh: 2001:db8::1
+    </p>
+  </article>
+
+  <article class="lesson-box">
+    <h2>04. Komponen Konfigurasi IP</h2>
+    <ul>
+      <li><b>IP Address:</b> Alamat identitas perangkat.</li>
+      <li><b>Subnet Mask:</b> Menentukan bagian network dan host.</li>
+      <li><b>Default Gateway:</b> Jalur untuk menghubungkan jaringan lokal dengan jaringan lain.</li>
+      <li><b>DNS:</b> Menerjemahkan nama domain menjadi alamat IP.</li>
+    </ul>
+  </article>
+
+  <article class="lesson-box">
+    <h2>05. Contoh Konfigurasi IP</h2>
+    <div class="ip-example">
+      <p>IP Address</p>
+      <code>192.168.1.10</code>
+
+      <p>Subnet Mask</p>
+      <code>255.255.255.0</code>
+
+      <p>Default Gateway</p>
+      <code>192.168.1.1</code>
+
+      <p>DNS</p>
+      <code>8.8.8.8</code>
+    </div>
+    <div class="note">
+      💡 Contoh ini menggunakan alamat jaringan private.
+      Pastikan IP yang digunakan sesuai dengan jaringan
+      dan tidak bertabrakan dengan perangkat lain.
+    </div>
+  </article>
+
+  <article class="lesson-box">
+    <h2>06. Cara Konfigurasi IP di Windows</h2>
+    <ol class="steps">
+      <li>Buka Control Panel.</li>
+      <li>Pilih Network and Internet.</li>
+      <li>Buka Network and Sharing Center.</li>
+      <li>Klik Change Adapter Settings.</li>
+      <li>Klik kanan pada Ethernet atau Wi-Fi.</li>
+      <li>Pilih Properties.</li>
+      <li>Pilih Internet Protocol Version 4 (TCP/IPv4).</li>
+      <li>Klik Properties.</li>
+      <li>Pilih Obtain an IP address automatically untuk DHCP, atau masukkan IP secara manual sesuai jaringan.</li>
+      <li>Klik OK untuk menyimpan pengaturan.</li>
+    </ol>
+  </article>
+
+  <article class="lesson-box">
+    <h2>07. Pengujian Koneksi Jaringan</h2>
+    <p>
+      Setelah konfigurasi selesai, koneksi dapat diperiksa
+      menggunakan Command Prompt dengan perintah berikut:
+    </p>
+    <div class="ip-example">
+      <code>ipconfig</code>
+      <p>Untuk melihat konfigurasi IP perangkat.</p>
+      <code>ping 192.168.1.1</code>
+      <p>Untuk menguji koneksi ke gateway contoh.</p>
+    </div>
+  </article>
+
+  <div class="page-navigation">
+    <a href="materi2.html" class="btn secondary-button">← Sebelumnya</a>
+    <a href="index.html" class="btn next-button">Kembali ke Home 🏠</a>
+  </div>
+
+</main>
+
+<footer>
+  <h2>🌸 SUMMER TKJ 🌸</h2>
+  <p>© <span class="current-year"></span> Summer TKJ</p>
+</footer>
+
+</body>
+</html>
