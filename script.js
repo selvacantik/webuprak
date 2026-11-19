@@ -3,8 +3,8 @@
 // SUPABASE CONFIGURATION
 // ===============================
 
-const SUPABASE_URL = "MASUKKAN_PROJECT_URL";
-const SUPABASE_ANON_KEY = "MASUKKAN_ANON_KEY";
+const SUPABASE_URL = "https://rwckczbnykqijiiwzuox.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_nq9A1I7-Oxan16bVbABtNA_Fcf7fQqI";
 
 // Membuat koneksi ke Supabase
 const supabaseClient = window.supabase.createClient(
