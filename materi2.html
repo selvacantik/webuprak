@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi 2 | GitHub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">🌸 Summer<span>TKJ</span></a>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="materi1.html">Kabel LAN</a></li>
+    <li><a class="active" href="materi2.html">GitHub</a></li>
+    <li><a href="materi3.html">Konfigurasi IP</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero">
+  <span>LESSON 02 💻</span>
+  <h1>Pembuatan Website dari GitHub</h1>
+  <p>Belajar membuat dan mempublikasikan website sendiri.</p>
+</header>
+
+<main class="lesson-container">
+
+  <article class="lesson-box">
+    <h2>01. Pengertian GitHub</h2>
+    <p>
+      GitHub adalah platform berbasis internet yang
+      digunakan untuk menyimpan, mengelola, dan
+      berkolaborasi dalam pengembangan kode program.
+      GitHub menggunakan sistem version control Git.
+    </p>
+  </article>
+
+  <article class="lesson-box">
+    <h2>02. Pengertian HTML, CSS, dan JavaScript</h2>
+    <div class="item-grid">
+      <div class="item">
+        <b>HTML</b>
+        <p>Menyusun struktur dan isi halaman website.</p>
+      </div>
+      <div class="item">
+        <b>CSS</b>
+        <p>Mengatur warna, desain, dan tampilan website.</p>
+      </div>
+      <div class="item">
+        <b>JavaScript</b>
+        <p>Menambahkan fungsi dan interaksi website.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="lesson-box">
+    <h2>03. Persiapan</h2>
+    <ul>
+      <li>Laptop atau komputer.</li>
+      <li>Koneksi internet.</li>
+      <li>Browser Google Chrome.</li>
+      <li>Visual Studio Code.</li>
+      <li>Akun GitHub.</li>
+      <li>Akun Vercel jika ingin melakukan deployment.</li>
+    </ul>
+  </article>
+
+  <article class="lesson-box">
+    <h2>04. Membuat Repository</h2>
+    <ol class="steps">
+      <li>Buka situs <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>.</li>
+      <li>Login menggunakan akun GitHub.</li>
+      <li>Klik tombol New Repository.</li>
+      <li>Masukkan nama repository, misalnya summer-tkj.</li>
+      <li>Pilih Public agar repository dapat diakses secara publik.</li>
+      <li>Klik Create Repository.</li>
+    </ol>
+  </article>
+
+  <article class="lesson-box">
+    <h2>05. Mengunggah File Website</h2>
+    <ol class="steps">
+      <li>Buka repository yang sudah dibuat.</li>
+      <li>Klik Add File.</li>
+      <li>Pilih Upload Files.</li>
+      <li>Unggah index.html, materi1.html, materi2.html, dan materi3.html.</li>
+      <li>Unggah folder css dan js beserta isinya.</li>
+      <li>Klik Commit Changes untuk menyimpan perubahan.</li>
+    </ol>
+  </article>
+
+  <article class="lesson-box">
+    <h2>06. Mengenal Supabase</h2>
+    <p>
+      Supabase merupakan layanan backend yang menyediakan
+      database PostgreSQL, autentikasi, penyimpanan file,
+      dan berbagai fitur untuk aplikasi web.
+    </p>
+    <p>
+      Supabase dapat digunakan untuk menyimpan data
+      komentar, akun pengguna, atau informasi lain
+      yang dibutuhkan website.
+    </p>
+    <div class="note">
+      🌐 Website statis tetap bisa berjalan tanpa Supabase.
+      Supabase digunakan ketika website membutuhkan data
+      yang disimpan dan diakses secara dinamis.
+    </div>
+  </article>
+
+  <article class="lesson-box">
+    <h2>07. Mengenal Vercel</h2>
+    <p>
+      Vercel merupakan platform untuk melakukan deployment
+      dan hosting website. Vercel dapat dihubungkan
+      langsung dengan repository GitHub sehingga
+      perubahan kode dapat dipublikasikan kembali.
+    </p>
+  </article>
+
+  <article class="lesson-box">
+    <h2>08. Cara Deploy ke Vercel</h2>
+    <ol class="steps">
+      <li>Buka <a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a>.</li>
+      <li>Login menggunakan akun GitHub.</li>
+      <li>Klik Add New Project.</li>
+      <li>Import repository summer-tkj.</li>
+      <li>Periksa pengaturan project.</li>
+      <li>Klik Deploy.</li>
+      <li>Tunggu proses deployment selesai.</li>
+      <li>Buka link website yang diberikan Vercel.</li>
+    </ol>
+    <div class="note">
+      ✨ Selamat! Website kamu sudah dapat diakses secara online.
+    </div>
+  </article>
+
+  <div class="page-navigation">
+    <a href="materi1.html" class="btn secondary-button">← Sebelumnya</a>
+    <a href="materi3.html" class="btn next-button">Selanjutnya →</a>
+  </div>
+
+</main>
+
+<footer>
+  <h2>🌸 SUMMER TKJ 🌸</h2>
+  <p>© <span class="current-year"></span> Summer TKJ</p>
+</footer>
+
+</body>
+</html>
