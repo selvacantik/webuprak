@@ -1,66 +1,54 @@
 
-// MENU NAVIGASI MOBILE
+// ===============================
+// SUPABASE CONFIGURATION
+// ===============================
 
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+const SUPABASE_URL = "MASUKKAN_PROJECT_URL";
+const SUPABASE_ANON_KEY = "MASUKKAN_ANON_KEY";
 
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", function () {
-    navLinks.classList.toggle("show");
-
-    if (navLinks.classList.contains("show")) {
-      menuToggle.textContent = "✕";
-    } else {
-      menuToggle.textContent = "☰";
-    }
-  });
-}
-
-// MENUTUP MENU SETELAH LINK DIKLIK
-
-if (navLinks) {
-  const links = navLinks.querySelectorAll("a");
-
-  links.forEach(function (link) {
-    link.addEventListener("click", function () {
-      navLinks.classList.remove("show");
-
-      if (menuToggle) {
-        menuToggle.textContent = "☰";
-      }
-    });
-  });
-}
-
-// TAHUN OTOMATIS PADA FOOTER
-
-const yearElements = document.querySelectorAll(".current-year");
-
-yearElements.forEach(function (element) {
-  element.textContent = new Date().getFullYear();
-});
-
-// EFEK ANIMASI SAAT SCROLL
-
-const lessonBoxes = document.querySelectorAll(
-  ".lesson-box, .material-card"
+// Membuat koneksi ke Supabase
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY
 );
 
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
+// ===============================
+// NAVBAR MOBILE
+// ===============================
 
-  lessonBoxes.forEach(function (box) {
-    box.classList.add("reveal");
-    observer.observe(box);
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
   });
 }
+
+// ===============================
+// TAHUN OTOMATIS
+// ===============================
+
+const yearElement = document.querySelector("#year");
+
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
+
+// ===============================
+// ANIMASI SCROLL
+// ===============================
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+});
+
+revealElements.forEach((element) => {
+  observer.observe(element);
+});
